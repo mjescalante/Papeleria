@@ -11,6 +11,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 //Prueba
+//Prueba JM
 /**
  *
  * @author usuario
