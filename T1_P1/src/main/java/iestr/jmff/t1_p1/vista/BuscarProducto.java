@@ -12,6 +12,7 @@ import javax.persistence.Persistence;
 
 //Prueba
 //Prueba JM
+//Probando - Manfredi
 /**
  *
  * @author usuario
