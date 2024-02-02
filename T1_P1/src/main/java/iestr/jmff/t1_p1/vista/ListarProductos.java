@@ -44,6 +44,7 @@ public class ListarProductos extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         txa1 = new javax.swing.JTextArea();
         btn1 = new javax.swing.JButton();
+        btnInforme = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,11 +63,23 @@ public class ListarProductos extends javax.swing.JFrame {
             }
         });
 
+        btnInforme.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnInforme.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/informe.png"))); // NOI18N
+        btnInforme.setText("Generar Informe");
+        btnInforme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInformeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(btnInforme)
+                .addContainerGap(224, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -80,7 +93,10 @@ public class ListarProductos extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(btnInforme)
+                .addContainerGap(250, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(18, 18, 18)
@@ -105,6 +121,13 @@ public class ListarProductos extends javax.swing.JFrame {
             txa1.append("---------------------\nCódigo: "+p.getCodigo()+"\nProducto: "+p.getProducto()+"\nFamilia: "+p.getFamilia()+"\nPrecio: "+p.getPrecio().toString()+"€\n---------------------\n");
         }
     }//GEN-LAST:event_btn1ActionPerformed
+
+    private void btnInformeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInformeActionPerformed
+        // TODO add your handling code here:
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence");
+        TablapapeleriaJpaController controller = new TablapapeleriaJpaController(emf);
+        GeneradorInformes.leerinformeBD(controller.findTablapapeleriaEntities());
+    }//GEN-LAST:event_btnInformeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,6 +169,7 @@ public class ListarProductos extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn1;
+    private javax.swing.JButton btnInforme;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea txa1;
     // End of variables declaration//GEN-END:variables

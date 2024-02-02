@@ -16,6 +16,7 @@ iestr\jmff\t1_p1\vista\Menu$5.class
 iestr\jmff\t1_p1\vista\EliminarProducto$3.class
 iestr\jmff\t1_p1\modelo\Tablapapeleria_.class
 iestr\jmff\t1_p1\vista\Menu$1.class
+iestr\jmff\t1_p1\vista\GeneradorInformes.class
 iestr\jmff\t1_p1\vista\ModificarProducto.class
 iestr\jmff\t1_p1\T1_P1.class
 iestr\jmff\t1_p1\vista\ListarProductos$1.class
@@ -23,6 +24,7 @@ iestr\jmff\t1_p1\vista\EliminarProducto$4.class
 iestr\jmff\t1_p1\controlador\TablapapeleriaJpaController.class
 iestr\jmff\t1_p1\vista\BuscarProducto$1.class
 iestr\jmff\t1_p1\vista\EliminarProducto$1.class
+iestr\jmff\t1_p1\vista\ListarProductos$3.class
 iestr\jmff\t1_p1\controlador\exceptions\NonexistentEntityException.class
 iestr\jmff\t1_p1\vista\Menu$3.class
 iestr\jmff\t1_p1\vista\ListarProductos.class
