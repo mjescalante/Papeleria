@@ -4,6 +4,8 @@
 
 package iestr.jmff.t1_p1;
 
+import iestr.jmff.t1_p1.vista.Menu;
+
 /**
  *
  * @author Usuario
@@ -11,6 +13,7 @@ package iestr.jmff.t1_p1;
 public class T1_P1 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Menu m = new Menu();
+        m.setVisible(true);
     }
 }

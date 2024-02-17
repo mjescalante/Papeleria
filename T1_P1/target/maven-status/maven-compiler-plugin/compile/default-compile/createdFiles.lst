@@ -16,7 +16,6 @@ iestr\jmff\t1_p1\vista\Menu$5.class
 iestr\jmff\t1_p1\vista\EliminarProducto$3.class
 iestr\jmff\t1_p1\modelo\Tablapapeleria_.class
 iestr\jmff\t1_p1\vista\Menu$1.class
-iestr\jmff\t1_p1\vista\GeneradorInformes.class
 iestr\jmff\t1_p1\vista\ModificarProducto.class
 iestr\jmff\t1_p1\T1_P1.class
 iestr\jmff\t1_p1\vista\ListarProductos$1.class
@@ -33,4 +32,5 @@ iestr\jmff\t1_p1\vista\NuevoProducto$2.class
 iestr\jmff\t1_p1\controlador\exceptions\PreexistingEntityException.class
 iestr\jmff\t1_p1\vista\EliminarProducto$2.class
 iestr\jmff\t1_p1\vista\Menu$6.class
+iestr\jmff\generador\GeneradorInformes.class
 iestr\jmff\t1_p1\vista\ModificarProducto$2.class

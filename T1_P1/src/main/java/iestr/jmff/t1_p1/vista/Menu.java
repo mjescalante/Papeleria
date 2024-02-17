@@ -25,7 +25,8 @@ public class Menu extends javax.swing.JFrame {
         //Nombre y configuración
         setTitle("Menu inicio");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
+        setLocationRelativeTo(this);
+               
         //Color de fondo
         Color color = new Color(200,200,250);
         this.getContentPane().setBackground(color);

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package iestr.jmff.t1_p1.vista;
+package iestr.jmff.t1_p1.generador;
 
 import iestr.jmff.t1_p1.modelo.Tablapapeleria;
 import java.time.LocalDateTime;
@@ -31,10 +31,10 @@ public class GeneradorInformes {
             
             JRDataSource datasource = new JRBeanArrayDataSource(lista.toArray());
 
-            String report = "src\\main\\resources\\iReport\\InformePapeleria.jasper";
+            String report = "src\\main\\resources\\report\\InformePapeleria.jasper";
 
             print = JasperFillManager.fillReport(report, param, datasource);
-            JasperExportManager.exportReportToPdfFile(print,"Informe,pdf");
+            JasperExportManager.exportReportToPdfFile(print,"Informe.pdf");
             JasperViewer.viewReport(print);
         }catch(JRException ex){
             Logger.getLogger(GeneradorInformes.class.getName()).log(Level.SEVERE, null, ex);

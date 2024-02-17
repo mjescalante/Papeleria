@@ -4,6 +4,7 @@
  */
 package iestr.jmff.t1_p1.vista;
 
+import iestr.jmff.t1_p1.generador.GeneradorInformes;
 import iestr.jmff.t1_p1.controlador.TablapapeleriaJpaController;
 import iestr.jmff.t1_p1.modelo.Tablapapeleria;
 import java.util.List;
@@ -27,7 +28,6 @@ public class ListarProductos extends javax.swing.JFrame {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence");
         producto = new TablapapeleriaJpaController(emf);
         productos = producto.findTablapapeleriaEntities();
-        
         
         initComponents();
     }
@@ -110,7 +110,6 @@ public class ListarProductos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        // TODO add your handling code here:
         if(productos.isEmpty()){
             Menu.error("No hay productos en la base de datos");
             return;
@@ -123,10 +122,7 @@ public class ListarProductos extends javax.swing.JFrame {
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btnInformeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInformeActionPerformed
-        // TODO add your handling code here:
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence");
-        TablapapeleriaJpaController controller = new TablapapeleriaJpaController(emf);
-        GeneradorInformes.leerinformeBD(controller.findTablapapeleriaEntities());
+        GeneradorInformes.leerinformeBD(productos);
     }//GEN-LAST:event_btnInformeActionPerformed
 
     /**
