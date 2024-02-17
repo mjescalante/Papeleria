@@ -20,9 +20,23 @@ import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
- * @author Manfredi
+ * @author Usuario
  */
 public class GeneradorInformes {
+    /**
+     * @author JM
+    * 
+    * <p>Conecta con el archivo 'jasper' proporcionandole los datos 
+    * de la tabla Tablapapeleria de la base de datos, para realizar
+    * un informe con dichos datos.</p>
+    * 
+    * <p><b>IMPORTANTE</b> Debe modificar la ruta/nombre del archivo 'jasper'
+    * directamente en el método, junto con el nombre del archivo de
+    * salida.</p>
+    *
+     * @param lista
+     * @exception JRException *CATCHED BUT NOT CONTROLLED*
+    */
     public static void leerinformeBD (List<Tablapapeleria> lista){
         try{
             JasperPrint print;
