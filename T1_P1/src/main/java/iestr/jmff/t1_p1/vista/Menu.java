@@ -25,7 +25,8 @@ public class Menu extends javax.swing.JFrame {
         //Nombre y configuración
         setTitle("Menu inicio");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
+        setLocationRelativeTo(this);
+               
         //Color de fondo
         Color color = new Color(200,200,250);
         this.getContentPane().setBackground(color);
@@ -137,35 +138,30 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        // TODO add your handling code here:
         NuevoProducto n = new NuevoProducto();
         n.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         n.setVisible(true);
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
-        // TODO add your handling code here:
         ListarProductos n = new ListarProductos();
         n.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         n.setVisible(true);
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-        // TODO add your handling code here:
         ModificarProducto n = new ModificarProducto();
         n.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         n.setVisible(true);
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
-        // TODO add your handling code here:
         EliminarProducto n = new EliminarProducto();
         n.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         n.setVisible(true);
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
-        // TODO add your handling code here:
         BuscarProducto n = new BuscarProducto();
         n.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         n.setVisible(true);
@@ -180,6 +176,7 @@ public class Menu extends javax.swing.JFrame {
         JOptionPane mensaje = new JOptionPane();
         JOptionPane.showMessageDialog(mensaje,texto,"ERROR",JOptionPane.ERROR_MESSAGE);
     }
+    
     
     static boolean esDouble(String texto){
         int cantidadPuntos = 0;
@@ -200,9 +197,6 @@ public class Menu extends javax.swing.JFrame {
     }
     
     static boolean codigoLibre(String codigo){
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence");
-        producto = new TablapapeleriaJpaController(emf);
-        productos = producto.findTablapapeleriaEntities();
         if((productos==null) || (!productos.isEmpty())){
             for(Tablapapeleria p : productos){
                 if(p.getCodigo().equals(codigo)){

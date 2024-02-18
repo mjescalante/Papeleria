@@ -1,6 +1,7 @@
 iestr\jmff\t1_p1\vista\BuscarProducto.class
 iestr\jmff\t1_p1\vista\EliminarProducto.class
 iestr\jmff\t1_p1\vista\NuevoProducto.class
+iestr\jmff\t1_p1\generador\GeneradorInformes.class
 iestr\jmff\t1_p1\vista\Menu$2.class
 iestr\jmff\t1_p1\vista\ModificarProducto$4.class
 iestr\jmff\t1_p1\vista\BuscarProducto$2.class
@@ -16,7 +17,6 @@ iestr\jmff\t1_p1\vista\Menu$5.class
 iestr\jmff\t1_p1\vista\EliminarProducto$3.class
 iestr\jmff\t1_p1\modelo\Tablapapeleria_.class
 iestr\jmff\t1_p1\vista\Menu$1.class
-iestr\jmff\t1_p1\vista\GeneradorInformes.class
 iestr\jmff\t1_p1\vista\ModificarProducto.class
 iestr\jmff\t1_p1\T1_P1.class
 iestr\jmff\t1_p1\vista\ListarProductos$1.class
