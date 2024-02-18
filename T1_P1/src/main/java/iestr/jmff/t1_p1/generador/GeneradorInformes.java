@@ -35,7 +35,6 @@ public class GeneradorInformes {
     * salida.</p>
     *
      * @param lista
-     * @exception JRException *CATCHED BUT NOT CONTROLLED*
     */
     public static void leerinformeBD (List<Tablapapeleria> lista){
         try{

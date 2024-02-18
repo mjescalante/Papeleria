@@ -10,10 +10,6 @@ import java.util.List;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-//Prueba
-//Prueba JM
-//Probando - Manfredi
-//Esto sale ya un poco mas facil - Manfredi
 /**
  *
  * @author usuario
