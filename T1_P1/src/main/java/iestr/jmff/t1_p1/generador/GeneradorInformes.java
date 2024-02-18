@@ -19,13 +19,13 @@ import net.sf.jasperreports.engine.data.JRBeanArrayDataSource;
 import net.sf.jasperreports.view.JasperViewer;
 
 /**
- *
- * @author Usuario
+ * <p>Clase destinada a alojar los métodos relacionados con la 
+ * generación de Informes con JasperReports.</p>
+ * 
+ * @author Fuentes
  */
-public class GeneradorInformes {
-    /**
-     * @author JM
-    * 
+public abstract class GeneradorInformes {
+    /** 
     * <p>Conecta con el archivo 'jasper' proporcionandole los datos 
     * de la tabla Tablapapeleria de la base de datos, para realizar
     * un informe con dichos datos.</p>
@@ -34,7 +34,8 @@ public class GeneradorInformes {
     * directamente en el método, junto con el nombre del archivo de
     * salida.</p>
     *
-     * @param lista
+    * @author Fuentes
+    * @param lista
     */
     public static void leerinformeBD (List<Tablapapeleria> lista){
         try{

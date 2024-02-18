@@ -14,12 +14,24 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author Usuario
+ * <p><strong>Clase Menu</strong></p>
+ * <p>Extiende javax.swing.JFrame</p>
+ * 
+ * <p>Ventana principal contenedora de todos
+ * los botones con sus respectivas funciones.</p>
+ * 
+ * @author Fuentes
  */
 public class Menu extends javax.swing.JFrame {
+    private static List<Tablapapeleria> productos;
+    private static TablapapeleriaJpaController producto;
+    
     /**
-     * Creates new form Menu
+     * <p>Constructor de la clase Menu: configura
+     * la ventana y crea una instancia de 
+     * TablaPapeleriaJpaController.</p>
+     * 
+     * @author Fuentes
      */
     public Menu() {
         //Nombre y configuración
@@ -137,47 +149,107 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * <p>Abre la ventana <a href="NuevoProducto.java">NuevoProducto.java</a>
+     * , configurando su cierre respecto a <a href="Menu.java">Menu.java</a></p>
+     * 
+     * @author Fuentes
+     * @param evt
+     */
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
         NuevoProducto n = new NuevoProducto();
         n.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         n.setVisible(true);
     }//GEN-LAST:event_btn1ActionPerformed
 
+    /**
+     * <p>Abre la ventana <a href="ListarProductos.java">ListarProductos.java</a>
+     * , configurando su cierre respecto a <a href="Menu.java">Menu.java</a></p>
+     * 
+     * @author Fuentes
+     * @param evt
+     */
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
         ListarProductos n = new ListarProductos();
         n.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         n.setVisible(true);
     }//GEN-LAST:event_btn3ActionPerformed
 
+    /**
+     * <p>Abre la ventana <a href="ModificarProducto.java">ModificarProducto.java</a>
+     * , configurando su cierre respecto a <a href="Menu.java">Menu.java</a></p>
+     * 
+     * @author Fuentes
+     * @param evt
+     */
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
         ModificarProducto n = new ModificarProducto();
         n.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         n.setVisible(true);
     }//GEN-LAST:event_btn2ActionPerformed
 
+    /**
+     * <p>Abre la ventana <a href="EliminarProducto.java">EliminarProducto.java</a>
+     * , configurando su cierre respecto a <a href="Menu.java">Menu.java</a></p>
+     * 
+     * @author Fuentes
+     * @param evt
+     */
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
         EliminarProducto n = new EliminarProducto();
         n.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         n.setVisible(true);
     }//GEN-LAST:event_btn5ActionPerformed
 
+    /**
+     * <p>Abre la ventana <a href="BuscarProducto.java">BuscarProducto.java</a>
+     * , configurando su cierre respecto a <a href="Menu.java">Menu.java</a></p>
+     * 
+     * @author Fuentes
+     * @param evt
+     */
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
         BuscarProducto n = new BuscarProducto();
         n.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         n.setVisible(true);
     }//GEN-LAST:event_btn4ActionPerformed
 
+    /**
+     * <p>Recibe un String, el cual se mostrará en un 
+     * <a href="javax.swing.JOptionPane.java">JOptionPane.java</a>,
+     * de tipo INFORMATION_MESSAGE con el Titulo "COMPLETADO".</p>
+     * 
+     * @author Fuentes
+     * @param texto 
+     */
     static void exito(String texto){
         JOptionPane mensaje = new JOptionPane();
         JOptionPane.showMessageDialog(mensaje,texto,"COMPLETADO",JOptionPane.INFORMATION_MESSAGE);
     }
     
+    /**
+     * <p>Recibe un String, el cual se mostrará en un 
+     * <a href="javax.swing.JOptionPane.java">JOptionPane.java</a>,
+     * de tipo ERROR_MESSAGE con el Titulo "ERROR".</p>
+     * 
+     * @author Fuentes
+     * @param texto 
+     */
     static void error(String texto){
         JOptionPane mensaje = new JOptionPane();
         JOptionPane.showMessageDialog(mensaje,texto,"ERROR",JOptionPane.ERROR_MESSAGE);
     }
     
     
+    /**
+     * <p>Recibe un String, el cual será analizado
+     * para comprobar si es un Double de máximo 2
+     * decimales.</p>
+     * 
+     * @author Fuentes
+     * @param texto 
+     * @return boolean True si es Double / False si no es Double
+     */
     static boolean esDouble(String texto){
         int cantidadPuntos = 0;
         for(int i = 0 ; i < texto.length() ; i++){
@@ -196,6 +268,15 @@ public class Menu extends javax.swing.JFrame {
         return true;
     }
     
+    /**
+     * <p>Recibe un código, el cual será comparado
+     * para ver si hay algún producto con ese mismo
+     * código.</p>
+     * 
+     * @author Fuentes
+     * @param codigo 
+     * @return boolean <b>True</b> si está libre (no existe) / <b>False</b> si no está libre (existe)
+     */
     static boolean codigoLibre(String codigo){
         if((productos==null) || (!productos.isEmpty())){
             for(Tablapapeleria p : productos){
@@ -208,6 +289,10 @@ public class Menu extends javax.swing.JFrame {
     }
     
     /**
+     *<p>Invoca el método run del Menu, creando una instancia
+     * y poniéndolo visible.</p>
+     * 
+     * @author JFrame
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -242,9 +327,6 @@ public class Menu extends javax.swing.JFrame {
         });
     }
 
-    private static List<Tablapapeleria> productos;
-    private static TablapapeleriaJpaController producto;
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn1;
     private javax.swing.JButton btn2;
