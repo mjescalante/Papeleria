@@ -12,13 +12,15 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 /**
- *
- * @author usuario
+ * Esta clase representa la interfaz gráfica para listar productos de una base de datos.
+ * Permite visualizar los productos almacenados y generar informes sobre ellos.
+ * @author Fran
  */
 public class ListarProductos extends javax.swing.JFrame {
 
     /**
-     * Creates new form ListarProductos
+     * Constructor de la clase ListarProductos.
+     * Inicializa la interfaz gráfica y carga los productos desde la base de datos.
      */
     public ListarProductos() {
         //Nombre y configuración
@@ -108,7 +110,13 @@ public class ListarProductos extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Este método se llama cuando se hace clic en el botón "Listar".
+     * Lista los productos cargados desde la base de datos en el área de texto.
+     * Si no hay productos, muestra un mensaje al usuario.
+     * @param evt Evento de acción generado por hacer clic en el botón.
+     */
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
         if(productos.isEmpty()){
             Menu.error("No hay productos en la base de datos");
@@ -121,11 +129,17 @@ public class ListarProductos extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn1ActionPerformed
 
+    /**
+     * Este método se llama cuando se hace clic en el botón "Generar Informe".
+     * Genera un informe sobre los productos cargados desde la base de datos.
+     * @param evt Evento de acción generado por hacer clic en el botón.
+     */
     private void btnInformeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInformeActionPerformed
         GeneradorInformes.leerinformeBD(productos);
     }//GEN-LAST:event_btnInformeActionPerformed
 
     /**
+     * Método principal de la aplicación. Crea una instancia de ListarProductos y la hace visible.
      * @param args the command line arguments
      */
     public static void main(String args[]) {

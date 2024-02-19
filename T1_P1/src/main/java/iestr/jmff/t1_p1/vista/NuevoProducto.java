@@ -13,13 +13,16 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author usuario
+ * Esta clase representa la interfaz gráfica para agregar un nuevo producto a la base de datos.
+ * Permite al usuario ingresar información sobre el nuevo producto, como código, nombre, familia y precio.
+ * También realiza validaciones sobre los campos ingresados.
+ * @author Fran
  */
 public class NuevoProducto extends javax.swing.JFrame {
 
     /**
-     * Creates new form NuevoProducto
+     * Constructor de la clase NuevoProducto.
+     * Inicializa la interfaz gráfica y prepara la conexión con la base de datos.
      */
     public NuevoProducto() {
         //Nombre y configuración
@@ -152,6 +155,11 @@ public class NuevoProducto extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Este método se llama cuando se hace clic en el botón "Reset".
+     * Limpia todos los campos de entrada de texto.
+     * @param evt Evento de acción.
+     */
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
         // TODO add your handling code here:
         txf1.setText("");
@@ -160,6 +168,11 @@ public class NuevoProducto extends javax.swing.JFrame {
         txf4.setText("");
     }//GEN-LAST:event_btn2ActionPerformed
 
+    /**
+     * Este método se llama cuando se hace clic en el botón "Nuevo Producto".
+     * Valida los campos ingresados y crea un nuevo objeto Tablapapeleria para almacenar en la base de datos.
+     * @param evt Evento de acción.
+     */
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
         // TODO add your handling code here:
         //Control de campos vacíos
@@ -193,6 +206,7 @@ public class NuevoProducto extends javax.swing.JFrame {
     }//GEN-LAST:event_btn1ActionPerformed
 
     /**
+     * Método principal de la aplicación. Crea una instancia de NuevoProducto y la hace visible.
      * @param args the command line arguments
      */
     public static void main(String args[]) {
