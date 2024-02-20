@@ -14,8 +14,11 @@ import javax.persistence.Persistence;
 import javax.swing.JFrame;
 
 /**
+ * La clase ModificarProducto representa la interfaz gráfica para modificar información
+ * de productos en una base de datos. Utiliza Java Swing para la interfaz y se conecta a la
+ * base de datos mediante JPA (Java Persistence API)
  *
- * @author usuario
+ * @author Manuel Alejandro Márquez
  */
 public class ModificarProducto extends javax.swing.JFrame {
 
@@ -174,7 +177,13 @@ public class ModificarProducto extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Maneja el evento de clic en el botón de modificar producto.
+     * Realiza validaciones de campos y actualiza la información del producto
+     * en la base de datos.
+     *
+     * @param evt Evento de acción generado por el botón.
+     */
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
         // TODO add your handling code here:
         //Control de campos vacíos
@@ -215,7 +224,12 @@ public class ModificarProducto extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_btn1ActionPerformed
-
+    /**
+     * Maneja el evento de clic en el botón de resetear campos.
+     * Limpia los campos de entrada y deshabilita la edición.
+     *
+     * @param evt Evento de acción generado por el botón.
+     */
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
         // TODO add your handling code here:
         txf1.setText("");
@@ -228,7 +242,12 @@ public class ModificarProducto extends javax.swing.JFrame {
         txf3.setEditable(false);
         txf4.setEditable(false);
     }//GEN-LAST:event_btn2ActionPerformed
-
+    /**
+     * Maneja el evento de clic en el botón de buscar producto.
+     * Realiza la búsqueda de un producto por código y muestra su información.
+     *
+     * @param evt Evento de acción generado por el botón.
+     */
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
         // TODO add your handling code here:
         if(txf1.getText().equals("")){
@@ -261,8 +280,9 @@ public class ModificarProducto extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_btn3ActionPerformed
-
+    
     /**
+     * Método principal que inicia la aplicación.
      * @param args the command line arguments
      */
     public static void main(String args[]) {
