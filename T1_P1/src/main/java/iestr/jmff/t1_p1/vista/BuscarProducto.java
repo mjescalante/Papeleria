@@ -11,13 +11,14 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 /**
- *
- * @author usuario
+ * Codigo para el formulario BuscarProducto
+ * @author Manfredi
  */
 public class BuscarProducto extends javax.swing.JFrame {
 
     /**
-     * Creates new form BuscarProducto
+     * Nos crea el nuevo fromulario de buscar producto, que tomara los datos desde Tablapapeleria,
+     * y nos servira luego en el momento de listar los productos
      */
     public BuscarProducto() {
         //Nombre y configuración
@@ -99,6 +100,12 @@ public class BuscarProducto extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Evento para el boton de buscar los productos por su codigo, al introducir
+     * un codigo en su campo, luego al pulsar el boton de buscar nos listara
+     * todos los productos que tengan dicho codigo
+     * @param evt 
+     */
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
         // TODO add your handling code here:
         if(txf1.getText().equals("")){
@@ -117,6 +124,7 @@ public class BuscarProducto extends javax.swing.JFrame {
     }//GEN-LAST:event_btn1ActionPerformed
 
     /**
+     * Metodo main
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -141,6 +149,7 @@ public class BuscarProducto extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(BuscarProducto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
