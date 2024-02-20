@@ -16,7 +16,7 @@ import javax.swing.JFrame;
 /**
  * La clase ModificarProducto representa la interfaz gráfica para modificar información
  * de productos en una base de datos. Utiliza Java Swing para la interfaz y se conecta a la
- * base de datos mediante JPA (Java Persistence API).
+ * base de datos mediante JPA (Java Persistence API)
  *
  * @author Manuel Alejandro Márquez
  */
