@@ -11,7 +11,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 /**
- * Codigo para el formulario BuscarProducto
+ * Codigo para el formulario BuscarProducto y mostrarlo en la lista pertinente
  * @author Manfredi
  */
 public class BuscarProducto extends javax.swing.JFrame {

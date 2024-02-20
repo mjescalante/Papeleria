@@ -134,7 +134,7 @@ public class Tablapapeleria implements Serializable {
     }
 
     /**
-     * 
+     * Este metodo hashCode nos devuelve el valor numerico
      * @return 
      */
     @Override
@@ -145,7 +145,7 @@ public class Tablapapeleria implements Serializable {
     }
 
     /**
-     * 
+     * Determinamos si el objeto es igual
      * @param object
      * @return 
      */
@@ -163,7 +163,7 @@ public class Tablapapeleria implements Serializable {
     }
 
     /**
-     * 
+     * En este metodo toString especificamos la forma de imprimir por pantalla los datos oportunos
      * @return 
      */
     @Override
