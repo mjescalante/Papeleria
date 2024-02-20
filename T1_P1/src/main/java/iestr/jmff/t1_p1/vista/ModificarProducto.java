@@ -19,7 +19,7 @@ import javax.swing.JFrame;
  * de productos en una base de datos. Utiliza Java Swing para la interfaz y se conecta a la
  * base de datos mediante JPA (Java Persistence API)
  *
- * @author Manuel Alejandro Márquez
+ * @author Manuel Alejandro Márquez.
  */
 public class ModificarProducto extends javax.swing.JFrame {
 
