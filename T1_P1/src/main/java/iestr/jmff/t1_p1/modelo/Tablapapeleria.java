@@ -17,7 +17,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author Usuario
+ * @author Manfredi
  */
 @Entity
 @Table(name = "tablapapeleria")
@@ -53,46 +53,90 @@ public class Tablapapeleria implements Serializable {
         this.id = id;
     }
 
+    /**
+     * Metodo get del id
+     * @return Integer
+     */
     public Integer getId() {
         return id;
     }
 
+    /**
+     * Metodo set para el ID
+     * @param id 
+     */
     public void setId(Integer id) {
         this.id = id;
     }
 
+    /**
+     * Metodo get del Codigo
+     * @return String
+     */
     public String getCodigo() {
         return codigo;
     }
 
+    /**
+     * Metodo set del Codigo
+     * @param codigo 
+     */
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
+    /**
+     * Metodo get del Producto
+     * @return String
+     */
     public String getProducto() {
         return producto;
     }
 
+    /**
+     * Metodo set del Producto
+     * @param producto 
+     */
     public void setProducto(String producto) {
         this.producto = producto;
     }
 
+    /**
+     * Metodo get de Familia
+     * @return String
+     */
     public String getFamilia() {
         return familia;
     }
 
+    /**
+     * Metodo set de Familia
+     * @param familia 
+     */
     public void setFamilia(String familia) {
         this.familia = familia;
     }
 
+    /**
+     * Metodo get del Precio
+     * @return Double
+     */
     public Double getPrecio() {
         return precio;
     }
 
+    /**
+     * Metodo set del Precio
+     * @param precio 
+     */
     public void setPrecio(Double precio) {
         this.precio = precio;
     }
 
+    /**
+     * 
+     * @return 
+     */
     @Override
     public int hashCode() {
         int hash = 0;
@@ -100,6 +144,11 @@ public class Tablapapeleria implements Serializable {
         return hash;
     }
 
+    /**
+     * 
+     * @param object
+     * @return 
+     */
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
@@ -113,6 +162,10 @@ public class Tablapapeleria implements Serializable {
         return true;
     }
 
+    /**
+     * 
+     * @return 
+     */
     @Override
     public String toString() {
         return "iestr.jmff.t1_p1.modelo.Tablapapeleria[ id=" + id + " ]";
