@@ -1,0 +1,142 @@
+@startuml
+abstract class iestr.jmff.t1_p1.generador.GeneradorInformes
+annotation java.lang.Override
+annotation java.lang.SuppressWarnings
+annotation javax.persistence.Basic
+annotation javax.persistence.Column
+annotation javax.persistence.Entity
+annotation javax.persistence.GeneratedValue
+annotation javax.persistence.Id
+annotation javax.persistence.NamedQueries
+annotation javax.persistence.NamedQuery
+annotation javax.persistence.Table
+class iestr.jmff.t1_p1.T1_P1
+class iestr.jmff.t1_p1.controlador.TablapapeleriaJpaController
+class iestr.jmff.t1_p1.controlador.exceptions.IllegalOrphanException
+class iestr.jmff.t1_p1.controlador.exceptions.NonexistentEntityException
+class iestr.jmff.t1_p1.controlador.exceptions.PreexistingEntityException
+class iestr.jmff.t1_p1.modelo.Tablapapeleria
+class iestr.jmff.t1_p1.vista.BuscarProducto
+class iestr.jmff.t1_p1.vista.EliminarProducto
+class iestr.jmff.t1_p1.vista.ListarProductos
+class iestr.jmff.t1_p1.vista.Menu
+class iestr.jmff.t1_p1.vista.ModificarProducto
+class iestr.jmff.t1_p1.vista.NuevoProducto
+class java.awt.Color
+class java.lang.Exception
+class java.time.LocalDateTime
+class java.util.ArrayList
+class java.util.HashMap
+class java.util.List
+class java.util.logging.Level
+class java.util.logging.Logger
+class javax.persistence.EntityManager
+class javax.persistence.EntityManagerFactory
+class javax.persistence.EntityNotFoundException
+class javax.persistence.GenerationType
+class javax.persistence.Persistence
+class javax.persistence.Query
+class javax.persistence.criteria.CriteriaQuery
+class javax.persistence.criteria.Root
+class javax.swing.JFrame
+class javax.swing.JOptionPane
+class net.sf.jasperreports.engine.JRDataSource
+class net.sf.jasperreports.engine.JRException
+class net.sf.jasperreports.engine.JasperExportManager
+class net.sf.jasperreports.engine.JasperFillManager
+class net.sf.jasperreports.engine.JasperPrint
+class net.sf.jasperreports.engine.data.JRBeanArrayDataSource
+class net.sf.jasperreports.view.JasperViewer
+interface java.io.Serializable
+iestr.jmff.t1_p1.generador.GeneradorInformes ..> iestr.jmff.t1_p1.modelo.Tablapapeleria
+iestr.jmff.t1_p1.generador.GeneradorInformes ..> java.time.LocalDateTime
+iestr.jmff.t1_p1.generador.GeneradorInformes ..> java.util.HashMap
+iestr.jmff.t1_p1.generador.GeneradorInformes ..> java.util.List
+iestr.jmff.t1_p1.generador.GeneradorInformes ..> java.util.logging.Level
+iestr.jmff.t1_p1.generador.GeneradorInformes ..> java.util.logging.Logger
+iestr.jmff.t1_p1.generador.GeneradorInformes ..> net.sf.jasperreports.engine.JRDataSource
+iestr.jmff.t1_p1.generador.GeneradorInformes ..> net.sf.jasperreports.engine.JRException
+iestr.jmff.t1_p1.generador.GeneradorInformes ..> net.sf.jasperreports.engine.JasperExportManager
+iestr.jmff.t1_p1.generador.GeneradorInformes ..> net.sf.jasperreports.engine.JasperFillManager
+iestr.jmff.t1_p1.generador.GeneradorInformes ..> net.sf.jasperreports.engine.JasperPrint
+iestr.jmff.t1_p1.generador.GeneradorInformes ..> net.sf.jasperreports.engine.data.JRBeanArrayDataSource
+iestr.jmff.t1_p1.generador.GeneradorInformes ..> net.sf.jasperreports.view.JasperViewer
+iestr.jmff.t1_p1.T1_P1 ..> iestr.jmff.t1_p1.vista.Menu
+iestr.jmff.t1_p1.controlador.TablapapeleriaJpaController ..> iestr.jmff.t1_p1.controlador.exceptions.NonexistentEntityException
+iestr.jmff.t1_p1.controlador.TablapapeleriaJpaController ..> iestr.jmff.t1_p1.modelo.Tablapapeleria
+iestr.jmff.t1_p1.controlador.TablapapeleriaJpaController ..> java.util.List
+iestr.jmff.t1_p1.controlador.TablapapeleriaJpaController ..> javax.persistence.EntityManager
+iestr.jmff.t1_p1.controlador.TablapapeleriaJpaController ..> javax.persistence.EntityManagerFactory
+iestr.jmff.t1_p1.controlador.TablapapeleriaJpaController ..> javax.persistence.EntityNotFoundException
+iestr.jmff.t1_p1.controlador.TablapapeleriaJpaController ..> javax.persistence.Query
+iestr.jmff.t1_p1.controlador.TablapapeleriaJpaController ..> javax.persistence.criteria.CriteriaQuery
+iestr.jmff.t1_p1.controlador.TablapapeleriaJpaController ..> javax.persistence.criteria.Root
+iestr.jmff.t1_p1.controlador.TablapapeleriaJpaController --|> java.io.Serializable
+iestr.jmff.t1_p1.controlador.exceptions.IllegalOrphanException --|> java.lang.Exception
+iestr.jmff.t1_p1.controlador.exceptions.IllegalOrphanException ..> java.util.ArrayList
+iestr.jmff.t1_p1.controlador.exceptions.IllegalOrphanException ..> java.util.List
+iestr.jmff.t1_p1.controlador.exceptions.NonexistentEntityException --|> java.lang.Exception
+iestr.jmff.t1_p1.controlador.exceptions.PreexistingEntityException --|> java.lang.Exception
+iestr.jmff.t1_p1.modelo.Tablapapeleria ..> java.lang.Override
+iestr.jmff.t1_p1.modelo.Tablapapeleria ..> javax.persistence.Basic
+iestr.jmff.t1_p1.modelo.Tablapapeleria ..> javax.persistence.Column
+iestr.jmff.t1_p1.modelo.Tablapapeleria ..> javax.persistence.Entity
+iestr.jmff.t1_p1.modelo.Tablapapeleria ..> javax.persistence.GeneratedValue
+iestr.jmff.t1_p1.modelo.Tablapapeleria ..> javax.persistence.Id
+iestr.jmff.t1_p1.modelo.Tablapapeleria ..> javax.persistence.NamedQueries
+iestr.jmff.t1_p1.modelo.Tablapapeleria ..> javax.persistence.NamedQuery
+iestr.jmff.t1_p1.modelo.Tablapapeleria ..> javax.persistence.Table
+iestr.jmff.t1_p1.modelo.Tablapapeleria ..> javax.persistence.GenerationType
+iestr.jmff.t1_p1.modelo.Tablapapeleria --|> java.io.Serializable
+iestr.jmff.t1_p1.vista.BuscarProducto ..> java.lang.SuppressWarnings
+iestr.jmff.t1_p1.vista.BuscarProducto ..> iestr.jmff.t1_p1.controlador.TablapapeleriaJpaController
+iestr.jmff.t1_p1.vista.BuscarProducto ..> iestr.jmff.t1_p1.modelo.Tablapapeleria
+iestr.jmff.t1_p1.vista.BuscarProducto ..> java.util.List
+iestr.jmff.t1_p1.vista.BuscarProducto ..> javax.persistence.EntityManagerFactory
+iestr.jmff.t1_p1.vista.BuscarProducto ..> javax.persistence.Persistence
+iestr.jmff.t1_p1.vista.BuscarProducto --|> javax.swing.JFrame
+iestr.jmff.t1_p1.vista.EliminarProducto ..> java.lang.SuppressWarnings
+iestr.jmff.t1_p1.vista.EliminarProducto ..> iestr.jmff.t1_p1.controlador.TablapapeleriaJpaController
+iestr.jmff.t1_p1.vista.EliminarProducto ..> iestr.jmff.t1_p1.controlador.exceptions.NonexistentEntityException
+iestr.jmff.t1_p1.vista.EliminarProducto ..> iestr.jmff.t1_p1.modelo.Tablapapeleria
+iestr.jmff.t1_p1.vista.EliminarProducto ..> java.util.List
+iestr.jmff.t1_p1.vista.EliminarProducto ..> java.util.logging.Level
+iestr.jmff.t1_p1.vista.EliminarProducto ..> java.util.logging.Logger
+iestr.jmff.t1_p1.vista.EliminarProducto ..> javax.persistence.EntityManagerFactory
+iestr.jmff.t1_p1.vista.EliminarProducto ..> javax.persistence.Persistence
+iestr.jmff.t1_p1.vista.EliminarProducto --|> javax.swing.JFrame
+iestr.jmff.t1_p1.vista.ListarProductos ..> iestr.jmff.t1_p1.generador.GeneradorInformes
+iestr.jmff.t1_p1.vista.ListarProductos ..> java.lang.SuppressWarnings
+iestr.jmff.t1_p1.vista.ListarProductos ..> iestr.jmff.t1_p1.controlador.TablapapeleriaJpaController
+iestr.jmff.t1_p1.vista.ListarProductos ..> iestr.jmff.t1_p1.modelo.Tablapapeleria
+iestr.jmff.t1_p1.vista.ListarProductos ..> java.util.List
+iestr.jmff.t1_p1.vista.ListarProductos ..> javax.persistence.EntityManagerFactory
+iestr.jmff.t1_p1.vista.ListarProductos ..> javax.persistence.Persistence
+iestr.jmff.t1_p1.vista.ListarProductos --|> javax.swing.JFrame
+iestr.jmff.t1_p1.vista.Menu ..> java.lang.SuppressWarnings
+iestr.jmff.t1_p1.vista.Menu ..> iestr.jmff.t1_p1.controlador.TablapapeleriaJpaController
+iestr.jmff.t1_p1.vista.Menu ..> iestr.jmff.t1_p1.modelo.Tablapapeleria
+iestr.jmff.t1_p1.vista.Menu ..> java.awt.Color
+iestr.jmff.t1_p1.vista.Menu ..> java.util.List
+iestr.jmff.t1_p1.vista.Menu ..> javax.persistence.EntityManagerFactory
+iestr.jmff.t1_p1.vista.Menu ..> javax.persistence.Persistence
+iestr.jmff.t1_p1.vista.Menu --|> javax.swing.JFrame
+iestr.jmff.t1_p1.vista.Menu ..> javax.swing.JOptionPane
+iestr.jmff.t1_p1.vista.ModificarProducto ..> java.lang.SuppressWarnings
+iestr.jmff.t1_p1.vista.ModificarProducto ..> iestr.jmff.t1_p1.controlador.TablapapeleriaJpaController
+iestr.jmff.t1_p1.vista.ModificarProducto ..> iestr.jmff.t1_p1.modelo.Tablapapeleria
+iestr.jmff.t1_p1.vista.ModificarProducto ..> java.util.List
+iestr.jmff.t1_p1.vista.ModificarProducto ..> java.util.logging.Level
+iestr.jmff.t1_p1.vista.ModificarProducto ..> java.util.logging.Logger
+iestr.jmff.t1_p1.vista.ModificarProducto ..> javax.persistence.EntityManagerFactory
+iestr.jmff.t1_p1.vista.ModificarProducto ..> javax.persistence.Persistence
+iestr.jmff.t1_p1.vista.ModificarProducto --|> javax.swing.JFrame
+iestr.jmff.t1_p1.vista.NuevoProducto ..> java.lang.SuppressWarnings
+iestr.jmff.t1_p1.vista.NuevoProducto ..> iestr.jmff.t1_p1.controlador.TablapapeleriaJpaController
+iestr.jmff.t1_p1.vista.NuevoProducto ..> iestr.jmff.t1_p1.modelo.Tablapapeleria
+iestr.jmff.t1_p1.vista.NuevoProducto ..> java.util.List
+iestr.jmff.t1_p1.vista.NuevoProducto ..> javax.persistence.EntityManagerFactory
+iestr.jmff.t1_p1.vista.NuevoProducto ..> javax.persistence.Persistence
+iestr.jmff.t1_p1.vista.NuevoProducto --|> javax.swing.JFrame
+iestr.jmff.t1_p1.vista.NuevoProducto ..> javax.swing.JOptionPane
+@enduml
